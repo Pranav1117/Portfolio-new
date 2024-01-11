@@ -21,7 +21,7 @@ const HsNav = () => {
           <Link to='/handson/js'>
           <div className='hs-nav'>
               <img src={js} alt='javascript'/>
-              <p>JavaScript</p>
+              <p>JS</p>
           </div>
           </Link>
 

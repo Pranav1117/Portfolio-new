@@ -20,13 +20,13 @@ const Projects = () => {
   return (
     <div className="projects">
       <header>
-        <h2>Projects</h2>
-        <p>During my MERN Course I've completed projects for each stack</p>
+        <h2 id="h2">Projects</h2>
+        <p className="during">During my MERN Course I've completed projects for each stack</p>
       </header>
 
 
       <div className="projects-wrapper">
-        <header>Projects i worked on</header>
+        <header id="project-heading">Projects i worked on</header>
         <hr />
         
        
