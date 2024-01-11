@@ -26,7 +26,7 @@ const Projects = () => {
 
 
       <div className="projects-wrapper">
-        <header id="project-heading">Projects i worked on</header>
+        <header id="project-heading">Stuff I made</header>
         <hr />
         
        
