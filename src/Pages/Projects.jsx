@@ -11,12 +11,36 @@ import express from '../Assets/Media/Tech-icons/express.png'
 import js from '../Assets/Media/Tech-icons/javascript.png'
 import mongnodb from '../Assets/Media/Tech-icons/mongo.png'
 import { Link } from "react-router-dom";
-
-
-
-
-
+import { useState,useEffect ,useRef} from "react";
 const Projects = () => {
+
+  const projectContentRef = useRef(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    const options = {
+      root: null, // use the viewport as the root
+      rootMargin: '0px', // no margin
+      threshold: 0.5, // trigger when 50% of the element is visible
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
+
+    if (projectContentRef.current) {
+      observer.observe(projectContentRef.current);
+    }
+
+    // cleanup
+    return () => {
+      if (projectContentRef.current) {
+        observer.unobserve(projectContentRef.current);
+      }
+    };
+  }, []); // run only once when the component mounts
+
+
   return (
     <div className="projects">
       <header>
@@ -30,7 +54,7 @@ const Projects = () => {
         <hr />
         
        
-        <div className="project-content">
+        <div className={`project-content ${isIntersecting?'s':''}` } id="project-content">
           <div className="projects-points">
             <div className="key-features">
               <header>Food.com(clone)</header>

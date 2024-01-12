@@ -36,7 +36,7 @@ const About = () => {
         <p className={`hello ${isIntersecting?'s':''}`}>Hello! I'm Pranav.</p>
         <p className={`me ${isIntersecting?'s':''}`}>
         <span className={`ti ${isIntersecting ? 's' : ''}`}>I</span>
-<span className={`ti ${isIntersecting ? 's' : ''}`}>m </span>
+        <span className={`ti ${isIntersecting ? 's' : ''}`}>m </span>
 <span className={`ti ${isIntersecting ? 's' : ''}`}>a </span>
 <span >web </span>
 <span className={`ti ${isIntersecting ? 's' : ''}`}>d</span>
