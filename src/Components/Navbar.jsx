@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className={`navbar-wrapper ${navToggle?'menu-opened':''}`} >
 
             <NavLink to='/' >Home</NavLink>
-            <NavLink to='/projects' >Projetcts</NavLink>
+            <NavLink to='/projects' >Projects</NavLink>
             <NavLink to='/Handson' >Handson</NavLink>
             <NavLink to='/about' >About</NavLink>
 
